@@ -19,7 +19,7 @@ Vec<T>::Vec(const Vec<T> &v)
 	elements = newdata.first;
 	first_free = cap = newdata.second;
 }
-template <typename	T>
+template <typename T>
 Vec<T>::Vec(Vec<T> &&v)throw() :elements(v.elements), first_free(v.first_free), cap(v.cap)
 {
 	v.elements = v.first_free = v.cap = nullptr;
